@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknfsd=self.webpackChunknfsd||[]).push([[516],{5433:e=>{e.exports=JSON.parse('{"categoryGeneratedIndex":{"title":"Most Wanted (2005)","slug":"/mw05","permalink":"/nfsd/mw05","sidebar":"mw05Sidebar","navigation":{"next":{"title":"Setting up for speedruns","permalink":"/nfsd/mw05/setup"}}}}')}}]);
