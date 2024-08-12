@@ -1,0 +1,11 @@
+.docItemContainer header + *,
+.docItemContainer article > *:first-child {
+  margin-top: 0;
+}
+
+@media (min-width: 997px) {
+  .docItemCol {
+    /* Narrower ToC */
+    max-width: calc(100 - var(--ifm-col-width)) !important;
+  }
+}
