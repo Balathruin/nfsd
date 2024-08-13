@@ -31,7 +31,7 @@ Heavies - A roadblock on condition 4 containing only Heavy SUVs. These also exis
 
 ## Miscellaneous
 
-The game can crash during pursuits in specific areas. Most notably on highways and the stadium in Rosewood, especially on heat 4 and 5, but heat 2 and 3 aren't completely safe either. Crashes may happen on a manual Sonny chase too when spawning the third cop car.
+The game can crash during pursuits in specific areas. Most notably on highways and the stadium in Rosewood, especially on heat 4 and 5, but heat 2 and 3 aren't completely safe either. Crashes may happen on a manual Sonny chase when spawning the third cop car.
 
 If you change settings before a run, restart your game, otherwise the upgrade shop will be empty. Exact cause is not yet known.
 
@@ -41,11 +41,11 @@ Rain does not affect physics, it is purely a visual effect.
 
 ## Menuing
 
-You can buffer directional menu inputs during animations. As an alternative, you can use the scroll wheel on the mouse to cycle some selections quickly (mouse position matters).
+You can buffer directional menu inputs during animations. As an alternative, you can use the scroll wheel on the mouse to cycle some selections quickly while hovering over them.
 
 Use the mouse to select boss markers and make sure to click near the centre. Never choose the first one, it plays a spinning animation normally. Clicking on the edge of a marker might select it, which means it is going to spin when chosen.
 
-If you open the map, your mouse is going to become invisible. Open it again, and move the cursor outside the map to get it back.
+If you open the map, your mouse might become invisible. Open it again, and move the cursor outside the map to get it back.
 
 Unless you need to start a race from safe house, it’s faster to return to free roam and use the blacklist menu there to start races, chases or cameras. Up to 0.5s timesave each time. Restarting a race on the finish line and returning to safe house is faster if you need to start a race from safe house.
 
@@ -53,9 +53,13 @@ It’s faster to challenge a boss from free roam if you have already received th
 
 ## Lap Glitch
 
-Lap Glitch order matters! Doing circuit 14 at the start is important, since the wrong order can cancel other lap glitches.
+In game version 1.2, changing the lap count of a circuit or the number of opponents of a KO within Quick Race affects the race in Career.
 
-There are two types of lap glitches: the *carry-over lap glitch* or *global lap glitch* and *direct lap glitch*. The global lap glitch is shared between many events because they use the same inherited value. Direct lap glitches are those we need to apply for each event during the speedrun, because they have their lap count explicitly specified. Common global lap glitches are circuit 14 and KO 1.
+The number of each event refers to their position in the All Regions list. The same system is used for everything else that is part of a list in the game.
+
+The order of certain lap glitches matter! Starting with circuit 14 is important, since a different order would cause one of the Sonny races to lose their lap glitch.
+
+There are two types of lap glitches: the *carry-over lap glitch* aka *global lap glitch* and *direct lap glitch*. The global lap glitch is shared between many events because they use the same inherited value. Direct lap glitches are those we need to apply for each event during the speedrun, because they have their lap count explicitly specified. Common global lap glitches are circuit 14 and KO 1.
 
 Lap Glitch is only active in the current session. If your game crashes or you close it, the lap glitches have to be reapplied. After a restart you need to perform a global lap glitch, then the direct ones from the boss you are currently on. Examples: circuit 14, 18 and KO 14 on JV. Alternatively, you can lap glitch an event from the boss you are on, which normally does not require one. Examples: KO 12 then KO 11 on Ming, or circuit 24 then 23 on Bull.
 
@@ -99,7 +103,7 @@ You want to stay on full throttle whenever possible. In most cases lifting durin
 
 Use analog throttle and hold the revs in perfect start range. Wait about a second after perfect start before going full throttle, otherwise you cancel your perfect start bonus (unless you already had full throttle when perfect start happened).
 
-For an even faster perfect start begin holding nitro before the race starts. Doing this correctly your car will shoot forward, plus you make better use of nos by using it as soon as it is available. This is not useful when starting behind a car, since you would crash into it. In those cases, wait until you steer clear of it. Optimal RPM for prologue: 5600; Elise: usually 5400
+For an even faster perfect start, begin holding nitro before the race starts. Doing this correctly your car will shoot forward, plus you make better use of nos by using it as soon as it is available. This is not useful when starting behind a car, since you would crash into it. In those cases, wait until you steer clear of it. Optimal RPM for prologue: 5600; Elise: usually 5400
 
 #### Drags
 
@@ -133,7 +137,7 @@ Drag races depend a lot on a good start, especially with the Golf. The fastest w
 
 ### Speedbreaker
 
-Activate speedbreaker for a few frames on specific jumps to keep more speed. Alternatively, using a tiny amount of steering input during landing can also mitigate speed lost when landing.
+Activate speedbreaker for a few frames or tenths on specific jumps to keep more speed. Alternatively, using a tiny amount of steering input during landing can also mitigate speed lost when landing.
 
 <details>
 <summary>Jump speed loss mitigation example</summary>
@@ -157,6 +161,19 @@ You can recharge speedbreaker by going above 160 km/h (100 mph) or by drifting.
 
 ## Pursuit basics
 
-**TO DO**
+1. Do NOT outrun your cops! You need to keep most of them because one of your main sources of bounty is destroying cop cars. If a few of them get stuck or are too slow it can be fine to lose them, but doing so too often removes a lot of potential bounty from your chase.
 
-do not outrun, use combo
+2. Make use of the Combo Bounty multiplier. Destroying any police vehicle will start or reset the Combo Bounty timer which lasts for 10 seconds. The multiplier is increased by 1 for each vehicle destroyed up to a maximum of 3. This is crucial for bounty generation. Destroying police vehicles one or two at a time when you have a large number of cops remaining is a huge waste. You should collect as many cops as you can and lead them all into a pursuit breaker to maximize the bounty reward - we call these waves. The maximum number of cops that can follow you at a time is 4 on Condition 1, 5 on Condition 2, 7 on Condition 3, 8 on Condition 4 and 10 on Condition 5. This means you usually want 5 or more cars to be destroyed at the same time. Whenever the opportunity presents itself, try and destroy cop cars while the combo is still active, for example when a roadblock appears behind a pursuit breaker.
+
+3. Use speedbreaker during collisions. The mass of your car is doubled while speedbreaker is active. You want to make use of this in almost every collision, especially against cops.
+
+4. Look at the minimap often so you can keep track of your cops, spot roadblocks and remember which pursuit breakers are still available. If you ran out of pursuit breakers within an area, go somewhere else. Pursuit breakers can respawn during a chase if you go far enough away from them. This is usually why we drive up to the intersection next to the stadium with the blocked road.
+
+5. Understand that speedrun chases can get very complex and you need to learn a lot to be able to improve: AI behaviour and pursuit tactics like rolling block, pit, etc., how each car reacts to collisions normally and as part of a roadblock, where cops and blocks spawn (these are in fixed positions) and much more.
+	- AI: Cops follow the player much easier at medium or high speed. Going too slow only confuses them as the game can't figure out where the player is trying to go. Learning about their pathing should be priority. They take certain corners in a really weird way, or try to cut ahead of the player using a different road only to get stuck.
+	- Collisions: Condition 1 and 2 cars are difficult to flip, but have low health. Side impacts are preferred and angle is not needed - smash them with a nearly perpendicular hit. Condition 3, 4 and 5 cars can be flipped with relative ease especially within blocks by hitting the rear quarter panel at a slight angle. Light SUVs can be difficult to flip as they slide around a lot, and usually require high angle front or rear quarter collisions. Heavy SUVs in blocks are usually easy to flip as long as you have some angle, but outside blocks they require much more force.
+	- Spawns: The game usually tries to spawn cops and roadblocks in the direction the player is heading. This doesn't always work correctly and certain areas often spawn blocks away from the player.
+
+## Run Archive
+
+**[Community Archive](https://www.youtube.com/playlist?list=PLOMxIpvhRHrh-MAE99OcphBoyfsEtcnd7)** & [Balathruin's Archive](https://www.youtube.com/playlist?list=PLOMxIpvhRHrgSUc2KnyHjNyKBhyEDIXPj)
