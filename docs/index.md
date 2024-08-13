@@ -12,4 +12,4 @@ This website is aiming to host speedrunning documentation for most Need for Spee
 
 [Need for Speed: Shift](/shift)
 
-[Shift 2: Unleased](/shift2/any)
+[Shift 2: Unleashed](/shift2/any)
