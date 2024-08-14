@@ -82,6 +82,12 @@ const config = {
           },
           {
             type: 'docSidebar',
+            sidebarId: 'carbonSidebar',
+            position: 'left',
+            label: 'Carbon',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'shiftSidebar',
             position: 'left',
             label: 'Shift',
@@ -110,12 +116,8 @@ const config = {
                 to: '/mw05',
               },
               {
-                label: 'Shift',
-                to: '/shift',
-              },
-              {
-                label: 'Shift 2',
-                to: '/shift2/any',
+                label: 'Carbon',
+                to: '/carbon',
               },
             ],
           },
@@ -133,11 +135,15 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'More Games',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/Balathruin/nfsd',
+                label: 'Shift',
+                to: '/shift',
+              },
+              {
+                label: 'Shift 2',
+                to: '/shift2/any',
               },
             ],
           },

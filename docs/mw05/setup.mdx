@@ -62,7 +62,7 @@ You can configure the deadzone in `NFSMostWanted.WidescreenFix.ini` by changing 
 
 **Do NOT enable compatibility mode or run the game as admin.** It is not needed and only causes issues!
 
-The game can randomly crash, primarily on loading screens, unless you **set affinity to a single core or thread**. Place the [start.bat](https://drive.google.com/file/d/1Jco9bZlcY7VSZjDgInc_F56etrgPNqVY) file next to your game executable and use it to start the game. Alternatively, you can use an application like [Process Lasso](https://bitsum.com/) to automatically change the affinity whenever the game starts.
+The game can randomly crash, primarily on loading screens, unless you **set affinity to a single core or thread**. Place the [start.bat](https://drive.google.com/file/d/1Jco9bZlcY7VSZjDgInc_F56etrgPNqVY) file next to your game executable and use it to start the game. Alternatively, you can use an application like [Process Lasso](https://bitsum.com/) to automatically change the affinity whenever the game starts. Launch the game then right click the process in Process Lasso: CPU Affinity > Always > Select CPU Affinity > Untick ALL, tick a single CPU and click OK. Avoid CPU 0 and 1 if possible, because Windows often uses these for background processes by default.
 
 **Enable rain in graphics options** if you are on modern Windows (10+, maybe 8 too) to avoid game crashes when getting busted. It’s likely caused by a shader issue related to the blurring on the protagonist’s face.
 

@@ -46,6 +46,32 @@ const sidebars = {
 	  href: 'https://www.speedrun.com/nfsmw05_ce',
 	},
   ],
+  carbonSidebar: [
+    {
+      type: 'category',
+      label: 'Carbon',
+      link: {
+          type: 'generated-index',
+		  slug: '/carbon'
+        },
+      items: [
+        'carbon/setup',
+        'carbon/info',
+        'carbon/ng-any',
+        'carbon/ngp-any',
+      ],
+    },
+	{
+	  type: 'link',
+	  label: 'Speedrun.com',
+	  href: 'https://www.speedrun.com/nfsc',
+	},
+	{
+	  type: 'link',
+	  label: 'Category Extensions',
+	  href: 'https://www.speedrun.com/nfscce',
+	},
+  ],
   shiftSidebar: [
     {
       type: 'category',

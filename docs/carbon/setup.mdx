@@ -1,0 +1,110 @@
+# Setting up for speedruns
+
+All the information needed to set up the PC version of Carbon for speedruns.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## Game version
+
+Make sure you are playing the **Collectors Edition v1.4** of the game to start with. Doing so will allow us to start with 10K extra cash for career mode which is required for the route.
+
+## Widescreen Fix
+
+**The only modification currently allowed is [an older version of widescreen fix](https://www.speedrun.com/nfsc/resources/teq52).** Newer versions that include simrate are banned due to modifying game physics. To install widescreen fix, extract the contents of the archive into your game folder.
+
+After you've installed the widescreen fix, enter the scripts folder and open `NFSCarbon.WidescreenFix.ini` with a text editor to configure it. **SkipIntro isn't allowed for speedruns**, since it lets you skip boss race intros.
+
+### Controller support
+
+#### Xbox (XInput)
+
+The game has full support for XInput (Xbox) controllers including button overlays with `ImproveGamepadSupport = 1` in `NFSCarbon.WidescreenFix.ini`.
+
+#### Playstation
+
+Playstation controllers require extra steps. The recommended method is using Steam and [adding Carbon as a Non-Steam Game](https://help.steampowered.com/en/faqs/view/4B8B-9697-2338-40EC). This way you can use Steam to configure your controller. To display Playstation buttons ingame, set `ImproveGamepadSupport = 2` in `NFSCarbon.WidescreenFix.ini`.
+
+#### Deadzone
+
+You can configure the deadzone in `NFSCarbon.WidescreenFix.ini` by changing `LeftStickDeadzone`. You can use [Gamepad Tester](https://hardwaretester.com/gamepad) to determine the minimum safe value. Best setting depends on your preference. If you want a sensitive stick, set it as low as you can without the car turning on its own, otherwise use slightly higher values. The default value of 10 works well enough for most.
+
+## External settings
+
+Set affinity to a single CPU to stop the “sound bug” from occurring which softlocks you in unskippable cutscenes. I suggest using [Process Lasso](https://bitsum.com/) for this. Launch the game then right click the process in Process Lasso: CPU Affinity > Always > Select CPU Affinity > Untick ALL, tick a single CPU and click OK. Avoid CPU 0 and 1 if possible, because Windows often uses these for background processes by default.
+
+120 is the fastest framerate to run the game at due to the in-game cutscenes playing faster and menu response time being the quickest. You can use [RivaTuner Statistics Server (RTSS)](https://www.guru3d.com/download/rtss-rivatuner-statistics-server-download/) or your graphics driver to limit your framerate. If you can’t run 120 with 1 core then I would consider lowering your fps to the next fastest.
+
+<details>
+<summary>Framerate comparison</summary>
+<div class="container-169">
+<iframe class="responsive-iframe" src="https://www.youtube.com/embed/jlfBiBelhlY?si=NS0FzX4aP_vVRmfA" title="YouTube video player" loading="lazy" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+</details>
+
+For Challenge Series categories setting up external keybinds for 60fps using [RivaTuner Statistics Server (RTSS)](https://www.guru3d.com/download/rtss-rivatuner-statistics-server-download/) will prevent you from getting busted in the zooming cutscene on intro of the chases. You can find these settings in: Setup > Plugins > HotkeyHandler.dll > Setup > Profiles
+
+<details>
+<summary>Pursuit Challenge Intro at 60 FPS</summary>
+  <Tabs>
+    <TabItem value="clip1" label="60 FPS Intro example">
+<div class="container-169">
+<iframe class="responsive-iframe" src="https://www.youtube.com/embed/-oY7R69iWW0?si=fYlDJS0u3UY4hJqL&amp;clip=UgkxvB7vCWMHq04AursDeV-L6ff7Z-ly0CB5&amp;clipt=EJi0BRiA7gU" title="YouTube video player" loading="lazy" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+	</TabItem>
+    <TabItem value="clip2" label="RTSS Hotkeys setup">
+<div class="container-169">
+<iframe class="responsive-iframe" src="https://www.youtube.com/embed/658GiBKe2Gk?si=wXou5ZRLzg5ITRr0" title="YouTube video player" loading="lazy" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+	</TabItem>
+  </Tabs>
+</details>
+
+Scroll wheel rebinds have been used in the run for top runners to remove the “territory attack” chance of coming through by a large percentage. This is made possible due to the game having a range of 3-5 frames before displaying this attack but the map will override this attack if you are able to pull it out quick enough, while spamming the map button may also work, this is most consistently done with a mouse wheel due to its high cps ratio. To do this start by remapping scroll up or down on your mouse to the M key on your keyboard. While it is allowed at the current time of writing it may be changed in future.
+
+## In-game settings
+
+<details>
+<summary>Game Settings example</summary>
+<div class="container-169">
+<iframe class="responsive-iframe" src="https://www.youtube.com/embed/sLFWtot-ZN4?si=TzMiFoYA6h06lrdr" title="YouTube video player" loading="lazy" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+</details>
+
+### Audio
+
+Most sound settings are preference apart from speech volume as this will stop us from getting the 9-1-1 call faster in races that have cops activated.
+
+Speech Volume on 0%: Reduces Police spawning and saves about 30s in the tutorial by skipping voice lines.
+
+### Video
+
+Shader Detail might reset upon starting the game!
+
+Shader Detail: High - Better visibility. Low setting disables projected headlights, which make canyons much darker. Only reduce this if your are desperate for performance or you prefer the barebones appearance.
+
+World Detail: Low or Medium. High setting includes additional objects which slow you down.
+
+### Gameplay
+
+Enable Autosave to allow reloading in case of territory attacks. After you have saved all your settings on a clean save without any completion of any gamemode, backup the save which is found in the “documents” folder inside “NFS Carbon”. Restore the backed up save once you wish to reset or start a new run, then load the save file in the “load” section under the “career” tab.
+
+Manual transmission is a very important part of the run because it increases acceleration and top speed by a large amount due to allowing the engine to rev much higher. If you are using automatic you will be limiting yourself in not only other mechanics but with carrying speed in general, so if you are not used to it then it’s recommended to learn it for a big time save and more accuracy in corners once mastered.
+
+Disable Game Moments Camera to avoid slow motion cutscenes of jumps and pursuit breakers.
+
+### Interface
+
+Disable picture in picture for a small timesave in the tutorial.
+
+### Controls
+
+Speedbreaker: Put the bind on an optimal button and not on a stick press E.g. Square/B. Speedbreaker plays a big role in the run so allowing you to press it while maintaining control of the left stick properly will greatly improve your accuracy in corners.
+
+Clutch: Press the clutch while in the air and release it after landing for more consistent landings.
+
+Reset Car Position: Useful to get busted or if you flip/get stuck somewhere.
+
+Handbrake: Useful in drift events.
+
+Activate Crew Member: Required in the tutorial, can have some use during the run.
