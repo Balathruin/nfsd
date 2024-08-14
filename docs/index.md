@@ -10,7 +10,7 @@ This website is aiming to host speedrunning documentation for most Need for Spee
 
 [Need for Speed: Most Wanted (2005)](/mw05)
 
-[Need for Speed: Carbon](/carbon)
+[Need for Speed: Carbon](/carbon) by [Artacer](https://www.speedrun.com/users/Artacer) and [Cousin](https://www.speedrun.com/users/Cousin)
 
 [Need for Speed: Shift](/shift)
 
