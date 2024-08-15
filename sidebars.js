@@ -87,6 +87,7 @@ const sidebars = {
 		'shift/pro-any',
 		'shift/tier-any',
 		'shift/tier-100',
+	    'shift/tuning',
 		],
     },
 	{

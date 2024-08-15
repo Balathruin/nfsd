@@ -1,0 +1,166 @@
+# Tuning Guide
+
+Information about upgrades and tuning for most cars.
+
+#### This page is for game version 1.02 without DLCs. Cars, upgrades and tuning were rebalanced in 1.02, so some of the information does not apply for older versions.
+
+#### In-game performance stats are not always accurate.
+
+## Drivetrain
+
+All drivetrain upgrades are partially broken due to typos. Chassis files: `BaulkTorque` vs Drivetrain upgrades: `BalkTorque`
+
+Drivetrain upgrades are required to avoid clutch slip when increasing the power output. 5 speed cars get a 6th gear at Stage 3 which adjusts the overall gearing, except the Corolla which receives longer gears instead. Works conversion (or Stage 3 for old muscle cars) makes gear changes faster.
+
+### Differential
+
+to do
+
+### Gearing
+
+to do
+
+## Engine
+
+There is a huge difference in engine upgrades between different cars. For example, all Tier 3 cars with the exception of the Exige only gain 5% power from the Stage 3 upgrade.
+
+Best: `T1_Works_Engine` - +17.5% Stage 1, +35% Stage 2, +50% Stage 3, +75% Works
+
+Strong: `Engine_Generic` - +17.5% Stage 1, +35% Stage 2, +40% Stage 3, +50% Works
+
+Weak: `T2_Engine` - +0% Stage 1, +5% Stage 2, +17.5% Stage 3, +30% Works
+
+T3: `T3_Engine` - +0% Stage 1 and 2, +5% Stage 3, +25% Works
+
+| Car | Engine Upgrades |
+| :-: | :-------------: |
+|RS 4 | Weak |
+| S3  | Strong |
+| S4  | Strong |
+| TT  | Strong |
+| 135i| Weak |
+|M3 E36| Weak |
+|M3 E46| Weak |
+|M3 E92| Weak |
+|Z4 M | Weak |
+|Camaro| Strong |
+|Cobalt| Strong |
+|67 Corvette| Weak |
+|Challenger| Strong |
+|Challenger R/T| Weak |
+|Charger R/T| Weak |
+|Escort| Best |
+|Focus| Strong |
+|GT500| Strong |
+|Civic| Strong |
+|S2000| Strong |
+| G35 | Weak |
+|Elise| Best |
+|Exige| Strong |
+|MX-5 | Strong |
+|RX-7 | Best |
+|RX-8 | Best |
+|Evo IX| Strong |
+|Evo X| Strong |
+|200SX| Best |
+|240SX| Strong |
+| 350Z| Weak |
+| 370Z| Weak |
+|Silvia| Best |
+|2000GT-R| Best |
+|Skyline| Strong |
+|Cayman| Weak |
+|Mégane| Best |
+| tC  | Strong |
+|Leon | Best |
+|67 GT-500| Weak |
+|Impreza| Strong |
+|Corolla| Best |
+|Supra| Best |
+|Golf | Strong |
+|Scirocco| Best |
+
+## Turbo
+
+Naturally aspirated cars always benefit greatly from the first turbo upgrade, gaining 20-50% additional power. 
+
+Upgrading an existing turbo is always really weak as you only gain 1-5% power. The only exception is the Supra which has special highly effective turbo upgrades - Stage 2 is +25% and Stage 3 is +45%.
+
+## Brake
+
+Brake upgrades are very simple - they increase brake torque. Stage 1 is +2%, Stage 2 is +8%, Stage 3 is +14% or +10% for Tier 3, Works is +20%.
+
+Brakes cannot be tuned. Brake Balance adjustment is broken and does nothing.
+
+## Suspension
+
+Suspension upgrades unlock tuning options, apply a spring and damper multiplier and adjust the default ride height.
+
+In case of Tier 1 and 2 cars each Stage increases spring stiffness and damper rate by 12.5% and 6.25% respectively and lowers default ride height by one step.
+
+Stage 1 is +12.5% springs and +6.25% dampers, Stage 2 is +25% springs and +12.5% dampers, Stage 3 is +37.5% springs and +18.75% dampers, Works is +50% springs and +25% dampers.
+
+Tier 3: Stage 3 is +15% springs and +8% dampers, Works is +30% springs and +15% dampers. Cars are lowered by 4 steps on Stage 3 and 6 steps after Works conversion.
+
+Exception: GT3 RS has its own suspension upgrade, which only increases springs and dampers by 5% and does not affect anything else.
+
+Note: The Honda S2000 has no rear right springs due to a typo. This is easily visible when the car is driven by an AI since the rear right is always slightly collapsed, giving the car a constant tilt.
+
+### Alignment
+
+to do
+
+### Springs and Dampers
+
+to do
+
+## Tires
+
+Tire upgrades are also simple - they increase tire grip. The upgrades are car dependant. They can range from +1% to +4% per Stage. Front and rear tires are not always upgraded equally.
+
+Tire Pressures are a great way to finetune car balance. Lower pressure in the rear can decrease oversteer and vice versa.
+
+## Aerodynamics
+
+All Body Kits have the same effect on Tier 1 and 2 cars.
+
+Cars in Shift usually have either terrible or amazing scaling from increasing downforce. In most cases the best tuning is either minimum or maximum and it's often only worth changing for specific tracks.
+
+The majority of cars prefer maximum downforce, so I'll only list the exceptions:
+
+| Car | Downforce |
+| :-: | :-------: |
+|M3 E36| Depends |
+|Veyron|Min/Depends (Front)|
+| CCX | Minimum |
+|Viper|Max/Depends|
+|Exige|Max/Depends (Front)|
+| F1  | Minimum |
+| SLR | Depends |
+|GT-R |Max/Depends|
+|GT-R SpecV|Max/Depends|
+|Zonda F|Minimum |
+|Zonda R|Minimum |
+|Carrera GT|Minimum|
+|GT3 RS| Depends |
+|Supra|Max/Depends|
+
+Cooler Radiator and Brake Duct openings don't do anything useful, these can always be reduced to minimum. I haven't tested the Pro Handling Model yet, but brake, tire and oil temperatures have no effect in this game even though they are all tracked.
+
+## Race Parts
+
+These upgrades work the same way on all cars.
+
+Weight Reduction: -2% mass, -5% mass, -10% mass - Does not affect car specific intertia.
+
+Race Exhaust: +10% Engine power
+
+Shorter Final Drive: 1 step shorter minimum and maximum Final Drive setting. Worthless on most cars, only use it for Works conversion.
+
+Increase Boost: +5% total turbo power - 1-3% overall power.
+
+Seam-welded Chassis: Increases the default Sway Bar stiffness by one step. The most useless upgrade in the entire game.
+
+Brake Master Cylinder: +8% Brake torque
+
+Wider Tires/Wheels: +1% grip - Minimal, but more effective than you think.
