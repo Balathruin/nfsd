@@ -31,9 +31,11 @@ You can configure the deadzone in `NFSCarbon.WidescreenFix.ini` by changing `Lef
 
 ## External settings
 
-Set affinity to a single CPU to stop the “sound bug” from occurring which softlocks you in unskippable cutscenes. I suggest using [Process Lasso](https://bitsum.com/) for this. Launch the game then right click the process in Process Lasso: CPU Affinity > Always > Select CPU Affinity > Untick ALL, tick a single CPU and click OK. Avoid CPU 0 and 1 if possible, because Windows often uses these for background processes by default.
+**Do NOT enable compatibility mode or run the game as admin.** It is not needed and only causes issues!
 
-120 is the fastest framerate to run the game at due to the in-game cutscenes playing faster and menu response time being the quickest. You can use [RivaTuner Statistics Server (RTSS)](https://www.guru3d.com/download/rtss-rivatuner-statistics-server-download/) or your graphics driver to limit your framerate. If you can’t run 120 with 1 core then I would consider lowering your fps to the next fastest.
+**Set affinity to a single CPU** to stop the “sound bug” from occurring which softlocks you in unskippable cutscenes. I suggest using [Process Lasso](https://bitsum.com/) for this. Launch the game then right click the process in Process Lasso: CPU Affinity > Always > Select CPU Affinity > Untick ALL, tick a single CPU and click OK. Avoid CPU 0 and 1 if possible, because Windows often uses these for background processes by default.
+
+**120 is the fastest framerate** to run the game at due to the in-game cutscenes playing faster and menu response time being the quickest. You can use [RivaTuner Statistics Server (RTSS)](https://www.guru3d.com/download/rtss-rivatuner-statistics-server-download/) or your graphics driver to limit your framerate. If you can’t run 120 with 1 core then I would consider lowering your fps to the next fastest.
 
 <details>
 <summary>Framerate comparison</summary>
@@ -108,3 +110,13 @@ Reset Car Position: Useful to get busted or if you flip/get stuck somewhere.
 Handbrake: Useful in drift events.
 
 Activate Crew Member: Required in the tutorial, can have some use during the run.
+
+## LiveSplit and timing
+
+**[LiveSplit website](http://livesplit.org/)**
+
+**The primary timing method for this game is Load Removed Time (LRT)**, or LoadLess (LL). Loading times are not consistent in this game, depending on FPS, hardware configuration and loaded content. Since the racers are randomly selected, the loading time is different every time you enter a race.
+
+**Please use LiveSplit with the load remover and autosplitter activated in the Splits Editor.** Set Game Name to `Need for Speed: Carbon`.
+
+**Make sure Refresh Rate in LiveSplit Settings is set to 60 or higher**, otherwise the load remover and autosplitter might not work correctly.

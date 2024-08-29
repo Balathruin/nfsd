@@ -76,6 +76,12 @@ const config = {
         items: [
           {
             type: 'docSidebar',
+            sidebarId: 'ug1Sidebar',
+            position: 'left',
+            label: 'UG1',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'mw05Sidebar',
             position: 'left',
             label: 'MW05',
@@ -109,8 +115,12 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Games',
+            title: 'Black Box Games',
             items: [
+              {
+                label: 'Underground',
+                to: '/ug1',
+              },
               {
                 label: 'Most Wanted (2005)',
                 to: '/mw05',
@@ -135,15 +145,15 @@ const config = {
             ],
           },
           {
-            title: 'More Games',
+            title: 'Other Games',
             items: [
               {
                 label: 'Shift',
                 to: '/shift',
               },
               {
-                label: 'Shift 2',
-                to: '/shift2/any',
+                label: 'Shift 2: Unleashed',
+                to: '/shift2',
               },
             ],
           },

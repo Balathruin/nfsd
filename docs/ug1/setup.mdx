@@ -1,0 +1,88 @@
+# Setting up for speedruns
+
+All the information needed to set up the PC version of Underground for speedruns.
+
+## Game version
+
+The release version of the game has various issues that make it unsuitable for speedruns. Apply the latest patch first: [Patch 1.4](https://www.patches-scrolls.de/patch/2916/7/28461)
+
+If you are planning to run Full Game, there is a voice line after choosing your first car which is faster in Russian.
+
+Language timing by Cousin:
+
+|Language|Time|
+| :----: |:--:|
+|Russian |4.61|
+|Japanese|5.35|
+| French |5.75|
+|Spanish |5.75|
+|English |5.81|
+|Italian |6.1 |
+| German |7.2 |
+
+If you have Most Wanted installed, you need to temporarily rename its executable for the installer to work.
+
+## Widescreen Fix
+
+**The only modification currently allowed is the widescreen fix.** [Newest version](https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/nfsu), [Legacy version](https://www.speedrun.com/nfsu/resources/b1xg0). To install widescreen fix, extract the contents of the archive into your game folder.
+
+After you've installed the widescreen fix, enter the scripts folder and open `NFSUnderground.WidescreenFix.ini` with a text editor to configure it. **SkipIntro and FPSLimit are NOT allowed for speedruns**. Make sure to disable FPSLimit by setting it to 0!
+
+### Controller support
+
+The game has decent controller support by default, but you can improve it further if you have the widescreen fix.
+
+#### Xbox (XInput)
+
+The game has full support for XInput (Xbox) controllers including button overlays with `ImproveGamepadSupport = 1` in `NFSUnderground.WidescreenFix.ini`.
+
+#### Playstation
+
+Playstation controllers require extra steps. The recommended method is using Steam and [adding Underground as a Non-Steam Game](https://help.steampowered.com/en/faqs/view/4B8B-9697-2338-40EC). This way you can use Steam to configure your controller. To display Playstation buttons ingame, set `ImproveGamepadSupport = 2` in `NFSUnderground.WidescreenFix.ini`.
+
+#### Deadzone
+
+You can configure the deadzone in `NFSUnderground.WidescreenFix.ini` by changing `LeftStickDeadzone`. You can use [Gamepad Tester](https://hardwaretester.com/gamepad) to determine the minimum safe value. Best setting depends on your preference. If you want a sensitive stick, set it as low as you can without the car turning on its own, otherwise use slightly higher values. The default value of 10 works well enough for most.
+
+## External settings
+
+**Do not use compatibility mode or run the game as admin** unless you are encountering serious issues.
+
+**Turn on `Disable fullscreen optimizations`** if your game crashes upon leaving races. This is caused by autosave.
+
+**Set affinity to a single CPU** to reduce the chances of random crashes. I suggest using [Process Lasso](https://bitsum.com/) for this. Launch the game then right click the process in Process Lasso: CPU Affinity > Always > Select CPU Affinity > Untick ALL, tick a single CPU and click OK. Avoid CPU 0 and 1 if possible, because Windows often uses these for background processes by default.
+
+**Make sure your game is running at 60 FPS**. You can use [RivaTuner Statistics Server (RTSS)](https://www.guru3d.com/download/rtss-rivatuner-statistics-server-download/) or your graphics driver to limit your framerate if needed.
+
+**Displaying your framerate is also required.** You can use [RivaTuner Statistics Server (RTSS)](https://www.guru3d.com/download/rtss-rivatuner-statistics-server-download/) for this too, or the overlay of your graphics driver. If you are using [OBS](https://obsproject.com/) and RTSS, enable Use Microsoft Detours API hooking in the settings of RTSS and enable Capture third-party overlays in the Game Capture of OBS.
+
+### Wheel Exploit
+
+The game has hidden assists for controllers that can be disabled by tricking the game into detecting them as a wheel. This is required for [Double Steering](/ug1/info#double-steering-rwd) with a controller, but can also be useful on its own.
+
+You need to find the registry entry of your controller within `regedit` at `HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\Joystick\OEM`. **Before modifying anything, export the key (folder) of your controller (VID_\*&PID_\*) or OEM as a whole**. Once you've found the key for your controller, edit the `OEMData` by changing the first hex value to 4. For example, change 23 to 43. Other games and software might not recognise your controller anymore until you restore the backup.
+
+<details>
+<summary>Double Steering on Gamepads</summary>
+<div class="container-169">
+<iframe class="responsive-iframe" src="https://www.youtube.com/embed/iJNlYZHhdZU?si=XR3qSgwFEP-q7dTb&amp;start=11" title="YouTube video player" loading="lazy" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+</details>
+
+## In-game settings
+
+Set Jump Cameras to minimum to disable it.
+
+For Double Steering you need to have an analog and a digital steering input you can use at the same time. For example, left stick and face buttons or right stick and d-pad.
+
+## LiveSplit and timing
+
+**[LiveSplit website](http://livesplit.org/)**
+
+**The primary timing method for this game is Load Removed Time (LRT)**, or LoadLess (LL).
+
+**Please use LiveSplit with the load remover and autosplitter activated in the Splits Editor.** Set Game Name to `Need for Speed: Underground`.
+
+**Make sure Refresh Rate in LiveSplit Settings is set to 60 or higher**, otherwise the load remover and autosplitter might not work correctly.
+
+**[Splits for all Full Game categories](https://www.speedrun.com/nfsu/resources/buhw9)**.
