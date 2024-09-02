@@ -106,7 +106,7 @@ Radical SR3 RS: `Radical_SR3`
 
 Clutch upgrades are required when the power is increased via engine or forced induction. Apply the lowest upgrade that prevents clutch slip when building with performance restriction. Some cars are configured incorrectly and always experience clutch slip with upgrades or an engine swap. Effective use of nitrous might also require an upgraded clutch.
 
-Differential upgrades unlock tuning. Currently not sure why, but with certain cars it feels like there is no LSD by default and applying the level 1 upgrade has a significant effect.
+Differential upgrades unlock tuning. Usually low priority, unless the default settings are problematic. Can be more important in high power or highly upgraded cars.
 
 Transmission upgrades barely increase the performance rating, so it can be worth installing at least the level 1 upgrade for faster shifts. Level 2 unlocks Final Drive tuning, level 3 unlocks full gearing tuning and replaces the gearbox on certain cars and adds an extra gear or adjusting default ratios. Works Conversion usually drastically reduces shift times.
 
@@ -128,11 +128,11 @@ Upgrades increase brake torque massively, however do NOT upgrade the brakes too 
 
 ## Tires
 
-Unless you are very limited by performance rating, you should upgrade your tires alongside power as it affects braking, cornering and acceleration significantly. AWD cars can handle weaker tires a little better, but RWD and FWD run into grip issues even with moderate power upgrades.
+Unless you are very limited by performance rating, you should upgrade your tires alongside power as it affects braking, cornering and acceleration significantly. AWD cars can handle weaker tires a little better, but RWD and FWD run into grip issues even with moderate power upgrades. Some cars (eg. Legends) have very strong tire upgrades, while others can be underwhelming, making Weight Reduction a better option.
 
 ## Body
 
-Bodykits unlock downforce adjustment and add or increase the diffuser under the car. It is recommended to install at least a basic body kit on C or higher class cars.
+Bodykits unlock downforce adjustment and add or increase the diffuser under the car. It is recommended to install at least a basic body kit on most C or higher class cars.
 
 Weight Reduction is relatively expensive in terms of rating, but it can increase cornering speeds and low-mid speed acceleration. The efficiency order is: Level 2 > Level 1 > Level 3. Can be better than rank #4 or #5 engine upgrades or even tires, but it depends mass, engine power and induction size.
 
@@ -160,7 +160,7 @@ The in-game descriptions are usually accurate.
 
 ### Tires and Brakes
 
-Tire Pressures - Always available: You can finetune the balance of oversteer vs understeer by adjusting the pressures. Lower pressure in the front results in more oversteer and vice versa. You can use telemetry view to see tire temperatures. Blue or teal means cold tires, so you might want to increase pressure. Yellow, orange or red means hot tires, so you might want to decrease pressure.
+Tire Pressures - Always available: You can finetune the balance of oversteer vs understeer by adjusting the pressures. Lower pressure in the front results in more oversteer and vice versa. Pressures also affect responsiveness - lower is slower, higher is faster. You can use telemetry view to see tire temperatures. Blue or teal means cold tires, so you might want to increase pressure. Orange or red means hot tires, so you might want to decrease pressure. If pressures are too high, the middle section between the two sidewalls heats up much faster.
 
 Brake Balance - Brakes Accessories level 2: With ABS disabled, you can adjust this to control which wheels are more likely to lock up. If the car refuses to turn in during or after braking, move brake balance to the rear. If the car is unstable or spins out under braking, move brake balance to the front.
 
@@ -170,19 +170,25 @@ Brake Pressure - Brakes Accessories level 3: Adjust brake torque - too much and 
 
 Steering Lock - Always available: Depends on car, track and preference. Smaller cars with short wheelbase (eg. Elise) require slightly lower values. Use lower settings for high speed tracks to increase accuracy or higher values for tracks with tight turns. The base value for most cars is 2° with a few exceptions where it is 3 or 4. Each step adds 1° of lock.
 
-Caster Angle - Suspension level 3: to do
+Caster Angle - Suspension level 3: Affects how quickly the car responds to steering inputs. Reduce it if the reaction is slow or increase it if the car feels twitchy.
 
-Toe Angle - Suspension level 2: The labels of Rear Toe Angle are swapped! If you are struggling with oversteer or instability during corner exit, especially with RWD cars, increase Rear Toe In (labeled Out). If you are willing to sacrifice response, you can increase both Front and Rear Toe In for a more stable and planted car. Adjusting the driven wheels has the biggest effect.
+Toe Angle - Suspension level 2: The labels of Rear Toe Angle are swapped! If you are struggling with oversteer or instability during corner exit, especially with RWD cars, increase Rear Toe In (labeled Out). If you are willing to sacrifice response, you can increase both Front and Rear Toe In for a more stable and planted car. Adjust Front Toe to finetune steering response - slight Toe Out is recommended in most cases. Adjusting the driven wheels has the biggest effect.
 
-Camber - Suspension level 3: to do
+Camber - Suspension level 3: Can't tell the difference. Most street cars default to -1.5° front and -1° rear. Each step is +0.1°, with the leftmost value being -4.5°, -4° or -3.5° depending on the car (front and rear not always the same). Affects tire temperatures - certain cars easily overheat the inside of the tires even at a small negative angle. If you don't notice any differences in how the car behaves either, try to adjust camber for more even tire temperatures.
 
 ### Stance
 
-TO DO
+Ride Height - Suspension level 2: Use suspension telemetry to determine the optimal ride height. You want to use the lowest settings that avoid bottoming out frequently.
 
 ### Differential
 
-TO DO
+Acceleration Lock - Differential level 2: 2WD only! Disabled with AWD even if available due to a bug. Adjust this to determine the maximum wheel speed difference between each side while accelerating. Lower settings allow you to rotate the car with throttle at the cost of traction. High values might make the car understeer while accelerating. Each step is +5% lock. Recommended values are 6-10 for most cars and tracks. Going below 4 is not recommended.
+
+Deceleration Lock - Differential level 3: 2WD only! Disabled with AWD even if available due to a bug. to do Adjust this to determine the maximum wheel speed difference between each side while decelerating (no throttle or brakes applied). Lower settings allow more manouverability at the cost of stability. Most cars seem to like the same 6-10 range as Acceleration Lock.
+
+Preload - Differential level 1 (2WD) or 3 (AWD): to do
+
+Viso Electronic Lock - Differential level 3: AWD only! Disabled with 2WD even if available due to a bug. Very low values forcefully straighten the car out while accelerating, causing tons of understeer. High values allow the car to perform slides at the cost of acceleration out of corners.
 
 ### Aerodynamics
 
@@ -192,18 +198,16 @@ TO DO
 
 Sway Bars - Suspension level 1: The main way to adjust balance between oversteer and understeer. The default setup on most cars has moderate understeer, so it is recommended to soften the front sway bar. If both are set too soft, the car becomes unstable during cornering, especially at medium and high speed. At least 3 steps of front and rear are recommended for most cars. Soften by at most one step or harden by 1-3 steps to balance the car.
 
-Spring Rates - Suspension level 2: The secondary adjustment for balance between oversteer and understeer. Softest settings recommended by default to increase grip and stability. Stiffen front or rear to balance the car. Increasing overall stiffness is not recommended outside of special cases like ovals.
+Spring Rates - Suspension level 2: The secondary adjustment for balance between oversteer and understeer. Softest settings recommended by default to increase grip and stability. Stiffen front or rear to balance the car. Increasing overall stiffness is not recommended outside of special cases like ovals or high downforce cars.
 
 Bump Stops - Suspension level 3: Avoid these and keep them at 0. Only experiment with bump stops if a certain section on a track causes the car to bottom out in such a way that you lose control or too much speed.
 
 ### Dampers
 
-Soft settings recommended. An alternative method for minor or moderate balance adjustments. Rebounds are the safest to tweak.
+An alternative method for minor or moderate balance adjustments. Rebounds are the safest to tweak.
 
 TO DO
 
 ### Drivetrain
 
-Try to keep the car in the optimal rev range (use telemetry). Tune gearing for each track if possible. Some long corners benefit from holding a specific gear on power.
-
-TO DO
+Try to keep the car in the optimal rev range (use telemetry). Either space all gears evenly, or set the higher gears slightly shorter for better acceleration. Tune gearing for each track if possible. Some long corners benefit from holding a specific gear on power.

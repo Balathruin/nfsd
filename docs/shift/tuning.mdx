@@ -14,11 +14,17 @@ Drivetrain upgrades are required to avoid clutch slip when increasing the power 
 
 ### Differential
 
-to do
+Acceleration Lock - Stage 3: 2WD only! Disabled with AWD even if available due to a bug. Adjust this to determine the maximum wheel speed difference between each side while accelerating. Lower settings allow you to rotate the car with throttle at the cost of traction. High values might make the car understeer while accelerating. Recommended values are 30-50 for most cars and tracks. Going below 20 is not recommended.
+
+Deceleration Lock - Stage 3: 2WD only! Disabled with AWD even if available due to a bug. Adjust this to determine the maximum wheel speed difference between each side while decelerating (no throttle or brakes applied). Lower settings allow more manouverability at the cost of stability. Most cars seem to like the same 30-50 range as Acceleration Lock.
+
+Preload - Stage 3: to do
+
+Viso Electronic Lock - Stage 3: AWD only! Disabled with 2WD even if available due to a bug. Very low values forcefully straighten the car out while accelerating, causing tons of understeer. High values allow the car to perform slides at the cost of acceleration out of corners.
 
 ### Gearing
 
-to do
+Try to keep the car in the optimal rev range. Either space all gears evenly, or set the higher gears slightly shorter for better acceleration. Tune gearing for each track if possible. Some long corners benefit from holding a specific gear on power.
 
 ## Engine
 
@@ -108,23 +114,31 @@ Note: The Honda S2000 has no rear right springs due to a typo. This is easily vi
 
 ### Alignment
 
-Steering Lock - Always available: Track and perference dependant. Lower settings allow higher accuracy on high speed tracks (Brands Hatch, Tri-Oval, Road America), higher settings allow a tighter turning radius for sharp, low speed corners (Autopolis Lakeside, Ebisu).
+Steering Lock - Always available: Depends on car, track and preference. Smaller cars with short wheelbase (eg. Elise) require slightly lower values. Lower settings allow higher accuracy on high speed tracks (Brands Hatch, Tri-Oval, Road America), higher settings allow a tighter turning radius for sharp, low speed corners (Autopolis Lakeside, Ebisu).
 
-Caster Angle - Stage 3 Unlock: to do
+Caster Angle - Stage 3: Affects how quickly the car responds to steering inputs. Reduce it if the reaction is slow or increase it if the car feels twitchy.
 
-Toe Angle -  Stage 1 Unlock: The labels of Rear Toe are swapped! The in-game description is accurate. If you are struggling with oversteer or instability during corner exit, especially with RWD cars, increase Rear Toe In (labeled Out). If you are willing to sacrifice response, you can increase both Front and Rear Toe In for a more stable and planted car. The fastest setups usually use small or medium Rear Toe In (labeled Out) and small or medium Front Toe Out.
+Toe Angle -  Stage 1: The labels of Rear Toe are swapped! The in-game description is accurate. If you are struggling with oversteer or instability during corner exit, especially with RWD cars, increase Rear Toe In (labeled Out). If you are willing to sacrifice response, you can increase both Front and Rear Toe In for a more stable and planted car. Adjust Front Toe to finetune steering response - slight Toe Out is recommended in most cases. Adjusting the driven wheels has the biggest effect.
 
-Camber - Stage 3 Unlock: to do (can't tell the difference)
+Camber - Stage 3: to do (can't tell the difference)
 
 ### Springs and Dampers
 
-to do
+Sway Bars - Always available: The main way to adjust balance between oversteer and understeer. If set too soft, the car becomes unstable during cornering, especially at medium and high speed. At least 3 steps stiffer front and rear are recommended for most cars. Soften by at most one step or harden by 1-3 steps to balance the car.
+
+Spring Rates - Stage 2: Softest settings recommended by default to increase grip and stability. Increasing overall stiffness is not recommended outside of special cases like ovals or very high downforce cars - when you want to avoid hitting the bump stops. Each step increases stiffness by a large amount, making these nearly unusable to adjust car balance.
+
+Bump Stops - Stage 3: Avoid these and keep them at 0. Bump stops are one of the main reasons for the excessive boucing in this game.
+
+An alternative method for minor or moderate balance adjustments. Rebounds are the safest to tweak. Default values are all slightly stiff in this game.
+
+TO DO
 
 ## Tires
 
 Tire upgrades are also simple - they increase tire grip. The upgrades are car dependant. They can range from +1% to +4% per Stage. Front and rear tires are not always upgraded equally.
 
-Tire Pressures are a great way to finetune car balance. Lower pressure in the rear can decrease oversteer and vice versa.
+Tire Pressures are a great way to finetune car balance. Lower pressure in the rear can decrease oversteer and vice versa. Pressures also affect responsiveness - lower is slower, higher is faster.
 
 ## Aerodynamics
 
