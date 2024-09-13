@@ -18,7 +18,7 @@ Acceleration Lock - Stage 3: 2WD only! Disabled with AWD even if available due t
 
 Deceleration Lock - Stage 3: 2WD only! Disabled with AWD even if available due to a bug. Adjust this to determine the maximum wheel speed difference between each side while decelerating (no throttle or brakes applied). Lower settings allow more manouverability at the cost of stability. Most cars seem to like the same 30-50 range as Acceleration Lock.
 
-Preload - Stage 3: Lower settings make it more difficult for the differential to lock, resulting in more oversteer. The default and minimum setting is medium preload (60 Nm).
+Preload - Stage 3: Lower settings make it more difficult for the differential to lock, resulting in more oversteer. The default and minimum setting is medium preload (60 Nm) on most cars.
 
 Viso Electronic Lock - Stage 3: AWD only! Disabled with 2WD even if available due to a bug. Very low values forcefully straighten the car out while accelerating, causing tons of understeer. High values allow the car to perform slides at the cost of acceleration out of corners.
 
@@ -124,7 +124,7 @@ Camber - Stage 3: to do (can't tell the difference)
 
 ### Springs and Dampers
 
-Sway Bars - Always available: The main way to adjust balance between oversteer and understeer. If set too soft, the car becomes unstable during cornering, especially at medium and high speed. At least 3 steps stiffer front and rear are recommended for most cars. Soften by at most one step or harden by 1-3 steps to balance the car.
+Sway Bars - Always available: The main way to adjust balance between oversteer and understeer. Stiffer front is more understeer, stiffer rear is more oversteer and vice versa. If set too soft, the car becomes unstable during cornering, especially at medium and high speed. At least 3 steps stiffer front and rear are recommended for most cars. Soften by at most one step or harden by 1-3 steps to balance the car.
 
 Spring Rates - Stage 2: Softest settings recommended by default to increase grip and stability. Increasing overall stiffness is not recommended outside of special cases like ovals or very high downforce cars - when you want to avoid hitting the bump stops. Each step increases stiffness by a large amount, making these nearly unusable to adjust car balance.
 
@@ -144,13 +144,15 @@ Fast Rebound - Stage 3: Changes how quickly the wheels return to their position 
 
 Tire upgrades are also simple - they increase tire grip. The upgrades are car dependant. They can range from +1% to +4% per Stage. Front and rear tires are not always upgraded equally.
 
-Tire Pressures are a great way to finetune car balance. Lower pressure in the rear can decrease oversteer and vice versa. Pressures also affect responsiveness - lower is slower, higher is faster.
+Tire Pressures are a great way to finetune car balance. Lower pressure in the rear can decrease oversteer and vice versa. Pressures also affect responsiveness - lower is slower, higher is faster. Not recommended to change by more than 10% from the middle.
 
 ## Aerodynamics
 
 All Body Kits have the same effect on Tier 1 and 2 cars.
 
 Cars in Shift usually have either terrible or amazing scaling from increasing downforce. In most cases the best tuning is either minimum or maximum and it's often only worth changing for specific tracks.
+
+Higher front downforce results in more oversteer and higher rear downforce results in more understeer in medium and high speed corners. Overall high downforce also aids in braking, but reduces acceleration at higher speeds.
 
 The majority of cars prefer maximum downforce, so I'll only list the exceptions:
 
@@ -171,6 +173,10 @@ The majority of cars prefer maximum downforce, so I'll only list the exceptions:
 |GT3 RS| Depends |
 |Supra|Max/Depends|
 
+The highest settings I found useful on the Zonda R are: 6 front, 5 rear - can be useful for low-medium speed tracks with heavy braking zones. Use 1 or 2 when you need a little extra.
+
+The lowest viable downforce value on the Works LP640 is about 16 in my experience.
+
 Cooler Radiator and Brake Duct openings don't do anything useful, these can always be reduced to minimum. I haven't tested the Pro Handling Model yet, but brake, tire and oil temperatures have no effect in this game even though they are all tracked.
 
 ## Race Parts
@@ -190,3 +196,23 @@ Seam-welded Chassis: Increases the default Sway Bar stiffness by one step. The m
 Brake Master Cylinder: +8% Brake torque
 
 Wider Tires/Wheels: +1% grip - Minimal, but more effective than you think.
+
+## How to tune your car
+
+When you change cars or install upgrades, you need to enter the tuning menu, leave, then enter again for the correct values to show. If you have entered the tuning menu before installing upgrades, you lose the default values for freshly unlocked settings. I recommend restoring defaults after you've installed all upgrades.
+
+1. Test your car with the default setup. Some cars have basic issues like super short [gearing](#gearing), which I recommend you try to solve before proceeding. Also set your preferred [steering lock](#alignment).
+
+2. Set the recommended downforce level for the car from [aerodynamics](#aerodynamics). Some cars like the Works GT-R have issues with high downforce that can't be solved.
+	- The recommendation is just a baseline, doesn't mean it is the best setting. For example, the Zonda R scales really well with more downforce, but the efficiency drops drastically, so it is only worth increasing slightly for specific tracks.
+
+3. Start balancing the car by adjusting [sway bars](#springs-and-dampers). Either start from default or 3 steps right for both. Switch to adjuting slow bump by one or two steps if you need finer control.
+	- You can attempt adjusting balance with spring rate too, but I found the results unsatisfactory. Keep in mind you can also adjust balance in mid-high speed corners by changing downforce.
+
+4. Tweak the response by adjusting [caster angle](#alignment), [fast bump](#springs-and-dampers) and [tire pressures](#tires).
+	- You can also change [toe angle](#alignment), but its effects are more complex.
+
+5. Only finetuning left: changing [rebounds](#springs-and-dampers) and [differential](#differential) allows you to specify how the car should behave in specific scenarios.
+	- Revisit older settings to ensure they are still correct after other changes.
+
+You can find setup examples in my [NFS Shift playlist](https://www.youtube.com/playlist?list=PLOMxIpvhRHrhjxJ-YzpHI6jxqaNg9kzck).
