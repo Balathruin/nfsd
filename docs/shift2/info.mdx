@@ -1,5 +1,8 @@
 # General Information
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ## Setting up on PC
 
 If you own the game on Steam or EA App, you are good to go. Disc versions require the 1.02 DLC patch to be applied. [DLC Download](https://help.ea.com/en/help/faq/dlc-for-classic-games/#needforspeed)
@@ -32,8 +35,12 @@ Always set Damage Off! Visual Only is misleading, as your wheels can still break
 
 Controller Vibration can have issues with not updating correctly or getting stuck. Recommended solution is running the game through Steam by [adding it as a Non-Steam Game](https://help.steampowered.com/en/faqs/view/4B8B-9697-2338-40EC), then enabling Steam Input.
 
-Steam Input can also be used to fix the messed up input curve. Open the Properties of Shift 2 on Steam and go to the Controller tab, then: Controller Configurator > Edit Layout > Joysticks > Cog next to Left Joystick Behavior > Dead Zones. Change Deadzone Source to Custom and turn on Show Advanced Deadzone Options. Adjust the first slider to 0 minimum and 100 maximum. Shift 2 requires 50% Anti-Deadzone to restore the normal input curve. If your controller requires deadzone, you also need to set an Anti-Deadzone Buffer.
+Set Output Axis to Horizontal Only, unless you use the left stick for menuing.
 
+Steam Input can also be used to fix the messed up input curve. Open the Properties of Shift 2 on Steam and go to the Controller tab, then: Controller Configurator > Edit Layout > Joysticks > Cog next to Left Joystick Behavior > Dead Zones. Change Deadzone Source to Custom and turn on Show Advanced Deadzone Options. Adjust the first slider to 0 minimum and 100 maximum. Shift 2 requires up to 50% Anti-Deadzone to restore the normal input curve. If your controller requires deadzone, you also need to set an Anti-Deadzone Buffer.
+
+<Tabs>
+  <TabItem value="ad50" label="50% Anti-Deadzone">
 | Anti-Deadzone | Anti-Deadzone Buffer | Physical Deadzone |
 |:-:|:-:|:-:|
 | `16384` | `0` | 0% |
@@ -46,10 +53,55 @@ Steam Input can also be used to fix the messed up input curve. Open the Properti
 16384 - (164 \* Physical Deadzone) = Anti-Deadzone
 
 328 \* Physical Deadzone = Anti-Deadzone Buffer
+  </TabItem>
+  <TabItem value="ad33" label="33.3% Anti-Deadzone">
+| Anti-Deadzone | Anti-Deadzone Buffer | Physical Deadzone |
+|:-:|:-:|:-:|
+| `10912` | `0` | 0% |
+| `10748` | `328` | 1% |
+| `10584` | `656` | 2% |
+| `10420` | `984` | 3% |
+| `10092` | `1640` | 5% |
+| `9272` | `3280` | 10% |
+
+10912 - (164 \* Physical Deadzone) = Anti-Deadzone
+
+328 \* Physical Deadzone = Anti-Deadzone Buffer
+  </TabItem>
+  <TabItem value="ad25" label="25% Anti-Deadzone">
+| Anti-Deadzone | Anti-Deadzone Buffer | Physical Deadzone |
+|:-:|:-:|:-:|
+| `8192` | `0` | 0% |
+| `8028` | `328` | 1% |
+| `7864` | `656` | 2% |
+| `7700` | `984` | 3% |
+| `7372` | `1640` | 5% |
+| `6552` | `3280` | 10% |
+
+8192 - (164 \* Physical Deadzone) = Anti-Deadzone
+
+328 \* Physical Deadzone = Anti-Deadzone Buffer
+  </TabItem>
+  <TabItem value="curve" label="Custom Response Curve">
+An alternative to adjusting anti-deadzone is using a custom response curve. This method doesn't play well if your controller requires deadzone.
+
+Select *Custom Curve* in Stick Response Curve.
+
+| Custom Response Curve | Translated Output at 10% Physical Position
+|:-:|:-:|
+| 325 | ~50% |
+| 320 | ~40% |
+| **316** | **~33%** |
+| 314 | ~30% |
+| 310 | ~25% |
+
+My settings: 316 Response Curve and 2 Dead Zone in Steam Input; 0% Steering Deadzone, 25% Steering Sensitivity and 85% Speed Sensitivity in-game
+  </TabItem>
+</Tabs>
 
 <details>
 
-<summary>Anti-Deadzone with 2% Physical Deadzone</summary>
+<summary>50% Anti-Deadzone with 2% Physical Deadzone</summary>
 
 ![Steam Input Stick Dead Zones](./img/antideadzone.webp)
 
