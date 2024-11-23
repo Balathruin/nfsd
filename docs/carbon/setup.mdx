@@ -33,15 +33,26 @@ You can configure the deadzone in `NFSCarbon.WidescreenFix.ini` by changing `Lef
 
 **Do NOT enable compatibility mode or run the game as admin.** It is not needed and only causes issues!
 
-**Set affinity to a single CPU** to stop the “sound bug” from occurring which softlocks you in unskippable cutscenes. I suggest using [Process Lasso](https://bitsum.com/) for this. Launch the game then right click the process in Process Lasso: CPU Affinity > Always > Select CPU Affinity > Untick ALL, tick a single CPU and click OK. Avoid CPU 0 and 1 if possible, because Windows often uses these for background processes by default.
+**Set affinity to a single CPU** to stop the “sound bug” from occurring which softlocks you in unskippable cutscenes. I suggest using [Process Lasso](https://bitsum.com/) for this. Launch the game then right click the process in Process Lasso: CPU Affinity > Always > Select CPU Affinity > Untick ALL, tick a single CPU and click OK. Avoid CPU 0 and 1 if possible, because Windows often uses these for background processes by default. This step can be ignored if you are only interested in level runs.
 
-**120 is the fastest framerate** to run the game at due to the in-game cutscenes playing faster and menu response time being the quickest. You can use [RivaTuner Statistics Server (RTSS)](https://www.guru3d.com/download/rtss-rivatuner-statistics-server-download/) or your graphics driver to limit your framerate. If you can’t run 120 with 1 core then I would consider lowering your fps to the next fastest.
+**120 is the fastest allowed framerate**. It speeds up the entire game slightly, including menus, unskippable cutscenes and racing. You can use [RivaTuner Statistics Server (RTSS)](https://www.guru3d.com/download/rtss-rivatuner-statistics-server-download/) or your graphics driver to limit your framerate. If you can’t run completely stable 120 with 1 core, reduce your fps target to 92.
+
+**Displaying your framerate is also required.** You can use [RivaTuner Statistics Server (RTSS)](https://www.guru3d.com/download/rtss-rivatuner-statistics-server-download/) for this too, or the overlay of your graphics driver. If you are using [OBS](https://obsproject.com/) and RTSS, enable Use Microsoft Detours API hooking in the settings of RTSS and enable Capture third-party overlays in the Game Capture of OBS.
 
 <details>
-<summary>Framerate comparison</summary>
+<summary>Framerate comparisons</summary>
+  <Tabs>
+    <TabItem value="clip1" label="Neville cutscene">
 <div class="container-169">
 <iframe class="responsive-iframe" src="https://www.youtube.com/embed/jlfBiBelhlY?si=NS0FzX4aP_vVRmfA" title="YouTube video player" loading="lazy" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 </div>
+	</TabItem>
+    <TabItem value="clip2" label="92 vs 120">
+<div class="container-169">
+<iframe class="responsive-iframe" src="https://www.youtube.com/embed/wu9JkMJeLC8?si=NgIbbPbJ7JRISXiA" title="YouTube video player" loading="lazy" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+</div>
+	</TabItem>
+  </Tabs>
 </details>
 
 For Challenge Series categories setting up external keybinds for 60fps using [RivaTuner Statistics Server (RTSS)](https://www.guru3d.com/download/rtss-rivatuner-statistics-server-download/) will prevent you from getting busted in the zooming cutscene on intro of the chases. You can find these settings in: Setup > Plugins > HotkeyHandler.dll > Setup > Profiles
